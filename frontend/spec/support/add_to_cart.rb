@@ -1,4 +1,6 @@
 def add_to_cart(product)
+  I18n.locale = 'en'
+
   visit spree.product_path(product)
 
   expect(page).to have_selector('form#add-to-cart-form')
